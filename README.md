@@ -189,7 +189,7 @@ All outputs (metrics, figures, CSVs) will be saved to the `data/` folder automat
 >“Personalized Federated slightly improves the F1-score compared to the Global Federated model by enhancing local adaptability through fine-tuning, while still preserving data privacy.”
 ---
 
-## 🔑 Key Concepts
+## Key Concepts
 
 | Term | Meaning |
 |------|---------|
@@ -215,7 +215,7 @@ Additional protections in this framework:
 
 ---
 
-## 📚 References
+## References
 
 1. McMahan et al. (2017). FedAvg — https://arxiv.org/abs/1602.05629
 2. Rajkomar et al. (2018). Deep Learning on EHRs — https://www.nature.com/articles/s41746-018-0029-1
