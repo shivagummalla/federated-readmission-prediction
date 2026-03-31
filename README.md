@@ -1,6 +1,6 @@
 # Privacy-Preserving Personalized Federated Learning for 30-Day Hospital Readmission Prediction
 
-## 📌 Project Overview
+##  Project Overview
 
 This project focuses on predicting 30-day hospital readmission using a privacy-preserving approach called Federated Learning. Instead of sharing sensitive patient data, multiple hospitals train models locally and share only model parameters.
 
@@ -13,7 +13,7 @@ The goal is to compare performance while maintaining data privacy in a non-IID h
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 federated-readmission-prediction/
@@ -32,7 +32,7 @@ federated-readmission-prediction/
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 **Diabetes 130-US Hospitals Dataset**
 
@@ -50,7 +50,7 @@ federated-readmission-prediction/
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### 1. Requirements
 
@@ -91,7 +91,7 @@ jupyter notebook federated_ml.ipynb
 
 ---
 
-## ▶️ How to Run the Code
+## How to Run the Code
 
 ### Option A — Jupyter Notebook (Recommended)
 
@@ -125,7 +125,7 @@ All outputs (metrics, figures, CSVs) will be saved to the `data/` folder automat
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
@@ -164,32 +164,31 @@ All outputs (metrics, figures, CSVs) will be saved to the `data/` folder automat
 
 ---
 
-## 📈 Results Summary
+## Results Summary
 
 ### Per-Hospital Performance
 
-| Hospital | Configuration | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
-|----------|--------------|----------|-----------|--------|----------|---------|
-| Hospital A | Local-Only | 0.7234 | 0.2697 | 0.1765 | 0.2133 | 0.5728 |
-| Hospital A | Global Federated | 0.7453 | 0.3099 | 0.1618 | 0.2126 | 0.5318 |
-| Hospital A | **Personalized Federated** | 0.6719 | 0.2597 | **0.2941** | **0.2759** | 0.5396 |
-| Hospital B | Local-Only | 0.6406 | 0.1892 | 0.1826 | 0.1858 | 0.4872 |
-| Hospital B | Global Federated | 0.7109 | 0.2381 | 0.1304 | 0.1685 | 0.4912 |
-| Hospital B | **Personalized Federated** | 0.6133 | 0.2098 | **0.2609** | **0.2326** | 0.4693 |
-| Hospital C | Local-Only | 0.7121 | 0.2203 | 0.1354 | 0.1677 | 0.5576 |
-| Hospital C | Global Federated | 0.7254 | 0.1707 | 0.0729 | 0.1022 | 0.5054 |
-| Hospital C | **Personalized Federated** | 0.6741 | 0.2768 | **0.3229** | **0.2981** | **0.5415** |
+| Hospital   | Configuration          | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+| ---------- | ---------------------- | -------- | --------- | ------ | -------- | ------- |
+| Hospital A | Local-Only             | 0.6485   | 0.6354    | 0.6176 | 0.6263   | 0.7044  |
+| Hospital A | Global Federated       | 0.6374   | 0.6245    | 0.6015 | 0.6128   | 0.6927  |
+| Hospital A | Personalized Federated | 0.6320   | 0.6175    | 0.6006 | 0.6089   | 0.6881  |
+| Hospital B | Local-Only             | 0.6449   | 0.6328    | 0.6099 | 0.6211   | 0.7037  |
+| Hospital B | Global Federated       | 0.6263   | 0.6118    | 0.5938 | 0.6027   | 0.6824  |
+| Hospital B | Personalized Federated | 0.6276   | 0.6076    | 0.6205 | 0.6140   | 0.6765  |
+| Hospital C | Local-Only             | 0.6532   | 0.6339    | 0.6365 | 0.6352   | 0.7011  |
+| Hospital C | Global Federated       | 0.6422   | 0.6276    | 0.6049 | 0.6160   | 0.6897  |
+| Hospital C | Personalized Federated | 0.6360   | 0.6206    | 0.5990 | 0.6096   | 0.6800  |
 
 ### Average Across All Hospitals
 
-| Configuration | Avg Accuracy | Avg F1-Score | Avg ROC-AUC |
-|--------------|-------------|-------------|------------|
-| Local-Only | 0.6920 | 0.1889 | 0.5392 |
-| Global Federated | 0.7272 | 0.1611 | 0.5095 |
-| **Personalized Federated** | 0.6531 | **0.2689** | 0.5168 |
+| Model                  | Accuracy | F1-Score | ROC-AUC |
+| ---------------------- | -------- | -------- | ------- |
+| Local-Only             | 0.6489   | 0.6275   | 0.7031  |
+| Global Federated       | 0.6353   | 0.6105   | 0.6883  |
+| Personalized Federated | 0.6319   | 0.6108   | 0.6815  ||
 
-> **Key finding:** Personalized Federated achieves the best F1-Score — a **42.4% improvement** over Global Federated — by recovering recall through local fine-tuning, without any raw patient data leaving each hospital.
-
+>“Personalized Federated slightly improves the F1-score compared to the Global Federated model by enhancing local adaptability through fine-tuning, while still preserving data privacy.”
 ---
 
 ## 🔑 Key Concepts
@@ -207,7 +206,7 @@ All outputs (metrics, figures, CSVs) will be saved to the `data/` folder automat
 
 ---
 
-## 🔒 Privacy Guarantee
+##  Privacy Guarantee
 
 > At **no point** in this framework are raw patient records transmitted between hospitals or to the aggregation server. Only floating-point **model weights** are shared. This is the core privacy guarantee of Federated Learning.
 
