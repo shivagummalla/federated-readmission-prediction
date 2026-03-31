@@ -21,13 +21,11 @@ federated-readmission-prediction/
 ├── federated_ml.ipynb             ← Main Jupyter notebook (run this)
 ├── diabetic_data.csv              ← Dataset (UCI Diabetes 130-US Hospitals)
 ├── README.md                      ← This file
-│
-├── results/
-│   ├── results_summary.csv
-│   ├── feature_importance.csv
-│   ├── fig1_performance_comparison.png
-│   ├── fig2_roc_curves.png
-│   └── fig3_feature_importance.png
+├── results_summary.csv
+├── feature_importance.csv
+├── fig1_performance_comparison.png
+├── fig2_roc_curves.png
+├── fig3_feature_importance.png
 ```
 
 ---
